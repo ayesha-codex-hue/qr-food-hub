@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant website</title>
+    <!-- linkking font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+     <!-- linking swiper CSS for -->
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link rel="stylesheet" href="qr.css">
+</head>
+<body>
+ <!-- header /navbar -->
+   <header>
+        <nav class="navbar section-content">
+            <a href="#"  class="nav-logo">
+            <h2 class="logo-text">QR FOOD HUB</h2>
+            </a>
+          <ul class="nav-menu">
+    <button id="menu-close-button" class="fas fa-times"></button>
+
+    <li class="nav-item">
+        <a href="#" class="nav-link">Home</a>
+    </li>
+
+    <li class="nav-item">
+        <a href="#about" class="nav-link">About</a>
+    </li>
+
+    <li class="nav-item">
+        <a href="#menu" class="nav-link">Menu</a>
+    </li>
+
+    <li class="nav-item">
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+    </li>
+
+    <li class="nav-item">
+        <a href="#contact" class="nav-link">Contact</a>
+    </li>
+
+    <!-- Admin Panel -->
+    <li class="nav-item">
+        <a href="#admin" class="nav-link">Admin Panel</a>
+    </li>
+</ul>
+
+<button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+    <main>
+        <!-- hero section -->
+<section class="hero-section">
+  <div class="section-content">
+    
+    <!-- LEFT SIDE TEXT -->
+    <div class="hero-details">
+      <h2 class="titles">Delicious Food</h2>
+      <h3 class="subtitle"> Scan, Savor, Smile </h3>
+      <p class="description">"Welcome to QR Food Hub,
+        where flavors meet convenience!  Dine in, takeout, or delivery
+        we've got you covered. Explore our menu, order with a scan,and
+        enjoy your food your way. From local favorites to global
+        cuisines, every bite is crafted with love."
+      </p>
+
+      <div class="buttons">
+        <a href="#menu" class="button order-now">Order Now</a>
+        <a href="#" class="button contact-us">Contact Us</a>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE VIDEO CARD -->
+    <div class="video-card">
+      <video src="BG (2).mp4" autoplay loop muted playsinline></video>
+    </div>
+
+  </div>
+</section>
+     <!-- About section -->
+      <section  class="about-section" id="about">
+        <div  class="section-content">
+        <div class="about-image-wrapper">
+            <img src="images/about.jpg" alt="About" class="about-image">
+        </div>
+      <div class="about-details">
+        <h2 class="section-title">About Us</h2>
+        <p class="text">At QR Food Hub, we're passionate about serving up more than just delicious food 
+           we're serving a seamless dining experience. Our QR Restaurant System is designed to make your visit effortless,
+            from ordering to payment, and everything in between. With just a scan, you can dive into our menu, customize 
+            your meal,and pay on the go.No more waiting for waiters, no more hassle with cash or cards.
+            Our mission? To make dining out easier, faster, and more fun for you. We believe food is best enjoyed without
+             fuss, so we're putting the power in your hands (or rather, your phone). Whether you're a foodie, a busy pro,
+              or just love trying new eats, we're here to make every meal a breeze.
+        </p>
+        <div class="social-link-list">
+          <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- Menu Section -->
+        <h2 class="section-title">Explore Menu</h2>
+    <!-- Categories -->
+    <div class="categories">
+        <button class="active" data-category="all">All</button>
+       <button data-category="burgers">Burgers</button>
+        <button data-category="pizza">Pizza</button>
+        <button data-category="pasta">Pasta</button>
+        <button data-category="desserts">Desserts</button>
+        <button data-category="drinks">Drinks</button>
+        <button data-category="deals">Deals</button>
+    </div>
+
+    <!-- Menu Items -->
+    <section class="menu-container" id="menu">
+
+        <!-- BURGERS -->
+        <div class="menu-item" data-category="burgers">
+            <img src="images/burger1.jpg" alt="">
+            <h3>Classic Burger</h3>
+            <p>Juicy grilled patty with cheese</p>
+            <span class="price">Rs 450</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+
+        <div class="menu-item" data-category="burgers">
+            <img src="images/burger2.jpg" alt="">
+            <h3>Zinger Burger</h3>
+            <p>Crispy chicken fillet</p>
+            <span class="price">Rs 550</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+        <div class="menu-item" data-category="burgers">
+            <img src="images/burger3.png" alt="">
+            <h3>Mighty Zinger</h3>
+            <p> Double fillet, jalapeno sauce</p>
+            <span class="price">Rs 650</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+        
+        <div class="menu-item" data-category="burgers">
+            <img src="images/burger4.png" alt="">
+            <h3>Spicy Crunch Burger</h3>
+            <p>Hot crispy chicken patty</p>
+            <span class="price">Rs 500</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+        
+        <div class="menu-item" data-category="burgers">
+            <img src="images/burger5.png" alt="">
+            <h3>Beef Grill Burger</h3>
+            <p>Juicy beef patty with cheese</p>
+            <span class="price">Rs 450</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+        
+        <div class="menu-item" data-category="burgers">
+            <img src="images/burger6.png" alt="">
+            <h3>Double Decker Burger</h3>
+            <p>Two patties, cheese, sauces</p>
+            <span class="price">Rs 750</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+        <!-- PIZZA -->
+        <div class="menu-item" data-category="pizza">
+            <img src="images/pizza3.jpg" alt="">
+            <h3>Chicken Tikka Pizza</h3>
+            <p>Spicy chicken tikka topping</p>
+            <span class="price">Rs 1200</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+
+        <div class="menu-item" data-category="pizza">
+            <img src="images/pizza2.jpg" alt="">
+            <h3>Cheese Lovers Pizza</h3>
+            <p>Extra loaded cheese</p>
+            <span class="price">Rs 1100</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+         <div class="menu-item" data-category="pizza">
+            <img src="images/pizza4.png" alt="">
+            <h3>Deep Dish pizza</h3>
+            <p>Extra loaded cheese</p>
+            <span class="price">Rs 1800</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+
+        <!-- PASTA -->
+        <div class="menu-item" data-category="pasta">
+            <img src="images/pasta1.jpg" alt="">
+            <h3>Alfredo Pasta</h3>
+            <p>Creamy white sauce pasta</p>
+            <span class="price">Rs 550</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+         <div class="menu-item" data-category="pasta">
+            <img src="images/pasta2.jpg" alt="">
+            <h3>Cheese Pasta
+</h3>
+            <p>Loaded cheese topping</p>
+            <span class="price">Rs 600</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+         <div class="menu-item" data-category="pasta">
+            <img src="images/pasta3.png" alt="">
+            <h3>"Beef Lasagna"
+</h3>
+            <p>Classic Italian layers</p>
+            <span class="price">Rs 500</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+
+        <!-- DESSERTS -->
+        <div class="menu-item" data-category="desserts">
+            <img src="images/lava.png" alt="">
+            <h3>Chocolate Lava Cake</h3>
+            <p>Warm and gooey chocolate</p>
+            <span class="price">Rs 350</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+ <div class="menu-item" data-category="desserts">
+            <img src="images/strawberry.png" alt="">
+            <h3>Strawberry Sundae
+</h3>
+            <p>Strawberry topping</p>
+            <span class="price">Rs 400</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+         <div class="menu-item" data-category="desserts">
+            <img src="images/desser4.jpg" alt="">
+            <h3>Macrons</h3>
+            <p>Too cute to ear pink macarons</p>
+            <span class="price">Rs 350</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+        <div class="menu-item" data-category="desserts">
+            <img src="images/desser3.jpg" alt="">
+            <h3>Cheese Cake</h3>
+            <p>gooey and soft cheese cake</p>
+            <span class="price">Rs 350</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+
+
+        <!-- < drinks -->
+        <div class="menu-item" data-category="drinks">
+            <img src="images/drink1.jpg" alt="">
+            <h3>Coca Cola</h3>
+            <p>Chilled soft drink</p>
+            <span class="price">Rs 120</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+         <div class="menu-item" data-category="drinks">
+            <img src="images/drink2.png" alt="">
+            <h3>"Sprite"
+</h3>
+            <p>"Refreshing lemon drink"</p>
+            <span class="price">Rs 120</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+        <div class="menu-item" data-category="drinks">
+            <img src="images/cold.png" alt="">
+            <h3>"Cold Coffee"
+    
+</h3>
+            <p>"Iced creamy coffee"</p>
+            <span class="price">Rs 350</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+
+        <!-- DEALS -->
+         <div class="menu-item" data-category="deals">
+            <img src="images/deal3.png" alt="">
+            <h3>Deal 1: Zinger + Drink</h3>
+            <p>Best Selling Combo</p>
+            <span class="price">Rs 1500</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+        <div class="menu-item" data-category="deals">
+            <img src="images/family.png" alt="">
+            <h3>Family Deal</h3>
+            <p>2 Zingers + Fries + Drinks</p>
+            <span class="price">Rs 1500</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+        <div class="menu-item" data-category="deals">
+            <img src="images/deal2.png" alt="">
+            <h3>student deal</h3>
+            <p> "Burger + Fries + Drink"</p>
+            <span class="price">Rs 650</span>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+        <!-- Cart Sidebar -->
+<div class="cart-sidebar" id="cartSidebar">
+    <h2>Your Cart</h2>
+
+    <div class="cart-items"></div>
+
+    <div class="cart-footer">
+        <p class="cart-total">Total: Rs 0</p>
+        <button  id="checkoutBtn" class="checkout-btn">Checkout</button>
+    </div>
+</div>
+
+<!-- Cart Toggle Button -->
+<button class="cart-toggle" id="cartToggle">
+    🛒
+    <span id="cartCount" class="cart-count">0</span>
+</button>
+    </section>
+     <!-- testimonial section -->
+    <section class="testimonials-section" id="testimonials">
+    <h2 class="section-title">Testimonials</h2>
+    <div class="section-content">
+      <div  class="slider-container swiper">
+        <div class="slider-wrapper">
+          <ul class="testimonials-list swiper-wrapper">
+             <li class="testimonial swiper-slide">
+                <img src="images/user-1.jpg" alt="User" class="user-image">
+                <h3 class="name">Sarah Siddiqui</h3>
+                <i class="feedback">"Loved the French roast.Perfectly
+                  balanced and rich.Will order again Inshallah!"</i>
+             </li>
+             <li class="testimonial swiper-slide">
+                <img src="images/user-2.jpg" alt="User" class="user-image">
+                <h3 class="name">Danish Khan</h3>
+                <i class="feedback">"Their cold coffee is just a masterpiece. 
+                  Strongly Recommended! Cozy Environment,just Loved it!"</i>  
+             </li>
+             <li class="testimonial swiper-slide">
+                <img src="images/user-3.jpg" alt="User" class="user-image">
+                <h3 class="name">Shayaan Ali</h3>
+                <i class="feedback">"Great Choclate lava Cake! Smooth and bold
+                  flavor. Fast shipping too!" </i>
+             </li>
+             <li class="testimonial swiper-slide ">
+                <img src="images/user-4.jpg" alt="User" class="user-image">
+                <h3 class="name">Aish Khan</h3>
+                <i class="feedback">"Fantastic deals!Fresh, Affordable and 
+                  aromatic.Quick shipping"</i>
+             </li>
+             <li class="testimonial swiper-slide">
+                <img src="images/user-5.jpg" alt="User" class="user-image">
+                <h3 class="name">Kazal Arslan</h3>
+                <i class="feedback">"Best decaf I've tried! Smooth and
+                  flavorful. Great Ambiance."</i>
+             </li> 
+          </ul>
+                <!-- these lines of code is only for slider view for testimonial section -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-slide-button swiper-button-prev"></div>
+          <div class="swiper-slide-button swiper-button-next"></div>
+        </div> 
+      </div>
+    </div>
+    </section>
+    </main>
+    <!-- Linking Swiper script -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js">
+     </script>
+     <!-- linking custom script -->
+      <script src="qr.js"></script>
+      
+</body>
+</html>

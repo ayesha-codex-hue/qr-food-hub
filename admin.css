@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #000;
+}
+
+/* Mobile top bar — hidden on desktop */
+.admin-topbar {
+    display: none;
+}
+
+/* Admin Layout */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.admin-sidebar {
+    width: 240px;
+    background: #281C02;
+    color: white;
+    padding: 25px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.admin-logo {
+    text-align: center;
+    color: #FFD700;
+    margin-bottom: 40px;
+    font-size: 22px;
+}
+
+.admin-sidebar ul {
+    list-style: none;
+}
+
+.admin-sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.admin-sidebar ul li a {
+    display: block;
+    padding: 13px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.admin-sidebar ul li a:hover,
+.admin-sidebar ul li a.active {
+    background: #FFD700;
+    color: #000;
+}
+
+/* Main Content */
+.admin-main {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    padding: 30px;
+}
+
+/* Top Header */
+.admin-header {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.admin-header h1 {
+    font-size: 26px;
+}
+
+/* Dashboard Cards */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-card h3 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #281C02;
+}
+
+/* Admin Form */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.admin-btn {
+    background: #FFD700;
+    color: #000;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.admin-btn:hover {
+    background: #e6c200;
+}
+
+.success-message {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Menu Table */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.admin-table th {
+    background: #281C02;
+    color: white;
+}
+
+.admin-table tr:hover {
+    background: #f9f9f9;
+}
+
+.available {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.not-available {
+    color: #c62828;
+    font-weight: bold;
+}
+
+.edit-btn,
+.delete-btn {
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.edit-btn {
+    background: #FFD700;
+    color: #000;
+}
+
+.delete-btn {
+    display: inline-block;
+    background: #dc3545;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #b02a37;
+}
+
+.cancel-btn {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 12px 20px;
+    background: #ddd;
+    color: #000;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* Orders */
+.order-card {
+    margin-bottom: 20px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.order-header h2 {
+    margin-bottom: 8px;
+}
+
+.order-header p {
+    margin-bottom: 5px;
+}
+
+.order-total {
+    text-align: right;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.order-header select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+.order-header .admin-btn {
+    padding: 8px 12px;
+    margin-top: 8px;
+}
+
+/* Dashboard summary cards (was inline in admin_dashboard.php) */
+.dash-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.dash-card {
+    flex: 1;
+    min-width: 200px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.dash-card h3 {
+    margin: 0 0 8px;
+    font-size: 13px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dash-card .val {
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+}
+
+.dash-card.green  .val { color: #1a8f4a; }
+.dash-card.orange .val { color: #d97706; }
+.dash-card.blue   .val { color: #2563eb; }
+
+/* Payment page cards (was inline in admin_payment.php) */
+.pay-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.pay-card {
+    flex: 1;
+    min-width: 200px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.pay-card h3 {
+    margin: 0 0 8px;
+    font-size: 13px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pay-card .val {
+    font-size: 26px;
+    font-weight: bold;
+    color: #222;
+}
+
+.pay-card.green .val { color: #1a8f4a; }
+.pay-card.red   .val { color: #b00; }
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.badge-paid    { background: #d4f4dd; color: #1a8f4a; }
+.badge-pending { background: #fff3cd; color: #8a6d00; }
+.badge-failed  { background: #fde2e2; color: #b00; }
+
+/* ===== RESPONSIVE — TABLET ===== */
+@media (max-width: 1024px) {
+    .dashboard-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== RESPONSIVE — MOBILE ===== */
+@media (max-width: 768px) {
+
+    /* Sidebar becomes a slide-in drawer */
+    .admin-sidebar {
+        width: 240px;
+        left: -240px;
+        transition: left 0.3s ease;
+        z-index: 9999;
+    }
+
+    .admin-sidebar.open {
+        left: 0;
+    }
+
+    /* Main takes full width */
+    .admin-main {
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+        padding-top: 75px; /* room for the top bar */
+    }
+
+    /* Top bar with hamburger */
+    .admin-topbar {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 55px;
+        background: #281C02;
+        color: #FFD700;
+        align-items: center;
+        padding: 0 15px;
+        z-index: 9998;
+    }
+
+    .admin-topbar button {
+        background: none;
+        border: none;
+        color: #FFD700;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .admin-topbar h2 {
+        margin-left: 15px;
+        font-size: 18px;
+    }
+
+    /* Cards stack */
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* Order cards: header wraps */
+    .order-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .order-header > div {
+        width: 100%;
+    }
+
+    /* Header padding shrinks */
+    .admin-header {
+        padding: 15px;
+    }
+
+    .admin-header h1 {
+        font-size: 20px;
+    }
+
+    /* Tables stay scrollable */
+    .admin-table {
+        min-width: 600px;
+    }
+
+    /* Dashboard cards full width */
+    .dash-cards,
+    .pay-cards {
+        flex-direction: column;
+    }
+
+    .dash-card,
+    .pay-card {
+        min-width: 100%;
+    }
+}
+
+/* ===== RESPONSIVE — SMALL PHONES ===== */
+@media (max-width: 480px) {
+    .admin-sidebar {
+        width: 80%;
+        left: -80%;
+    }
+
+    .admin-main {
+        padding: 10px;
+        padding-top: 65px;
+    }
+
+    .admin-btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+ 
+        .pay-cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+        .pay-card {
+            flex: 1;
+            min-width: 200px;
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .pay-card h3 {
+            margin: 0 0 8px;
+            font-size: 13px;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .pay-card .val {
+            font-size: 26px;
+            font-weight: bold;
+            color: #222;
+        }
+        .pay-card.green .val { color: #1a8f4a; }
+        .pay-card.red .val   { color: #b00; }
+
+        .badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .badge-paid    { background: #d4f4dd; color: #1a8f4a; }
+        .badge-pending { background: #fff3cd; color: #8a6d00; }
+        .badge-failed  { background: #fde2e2; color: #b00; }
+    /* dashboard styling */
+        .dash-cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+        .dash-card {
+            flex: 1;
+            min-width: 200px;
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .dash-card h3 {
+            margin: 0 0 8px;
+            font-size: 13px;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .dash-card .val {
+            font-size: 28px;
+            font-weight: bold;
+            color: #222;
+        }
+        .dash-card.green  .val { color: #1a8f4a; }
+        .dash-card.orange .val { color: #d97706; }
+        .dash-card.blue   .val { color: #2563eb; }
+    
