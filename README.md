@@ -14,3 +14,13 @@ Customers scan a QR code at their table to view the digital menu, place an order
 2. Import the database into phpMyAdmin.
 3. Start Apache and MySQL.
 4. Open `http://localhost/QR-restaurant/index.php`.
+   ## Screenshots
+
+### Customer Home Page
+![Home Page](CP.png)
+
+### Admin Dashboard
+![Dashboard](AD.png)
+
+### QR Generator
+![QR Codes](QR.png)
